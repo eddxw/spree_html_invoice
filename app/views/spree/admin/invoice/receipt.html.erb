@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<%= stylesheet_link_tag "admin/html-receipt.css" , media: "all" %>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title><%= Spree.t("#{params[:template]}.header") %></title>
 </head>
@@ -12,14 +13,15 @@
     </div>
     <div class="wrapper">
       <div class="line_items">
-        <%= render "spree/admin/invoice/line_items_invoice" %>
+        <%= render "spree/admin/invoice/line_items_receipt" %>
       </div>
-      <!--<div class="spacer"> &nbsp;</div>-->
       <div class="totals">
         <%= render "spree/admin/invoice/totals_receipt" %>
       </div>
     </div>
+    <div id="footer">
+      <%= render "spree/admin/invoice/receipt_footer" %>
+    </div>
   </div>
 </body>
 </html>
-
